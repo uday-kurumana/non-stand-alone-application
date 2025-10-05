@@ -1,0 +1,9 @@
+install json server
+npm install json-server --save-dev
+
+
+        if necessary only 
+            To update run: npm install -g npm@11.6.1
+
+run json server
+    npm run json:server    
