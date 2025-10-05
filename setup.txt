@@ -6,4 +6,18 @@ npm install json-server --save-dev
             To update run: npm install -g npm@11.6.1
 
 // run json server
-    npm run json:server    
+    npm run json:server  
+
+
+    create multiple branches   
+    master , json-server
+
+    master ---> json-server
+
+    master          =             json-server 
+
+    fetch any local changes present 
+    if present first i have to take/pull changes of my local branches    
+
+    now use pull-from option in vs code 
+    merging both branches is done now both branches will have same code
