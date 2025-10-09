@@ -6,7 +6,7 @@ import { App } from './app';
 import { AdminDashboardComponent } from './admin-dashboard.component/admin-dashboard.component';
 import { DeptDashboardComponent } from './dept-dashboard.component/dept-dashboard.component';
 import { EmployeeDashboardComponent } from './employee-dashboard.component/employee-dashboard.component';
-import { MyComponent } from './my-component/my-component';
+// import { MyComponent } from './my-component/my-component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { MyComponent } from './my-component/my-component';
     AdminDashboardComponent,
     DeptDashboardComponent,
     EmployeeDashboardComponent,
-    MyComponent
+    // MyComponent
   ],
   imports: [
     BrowserModule,

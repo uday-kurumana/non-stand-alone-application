@@ -21,3 +21,6 @@ npm install json-server --save-dev
 
     now use pull-from option in vs code 
     merging both branches is done now both branches will have same code
+
+// add bootsrap features to angular project
+        npm install bootstrap --save-dev

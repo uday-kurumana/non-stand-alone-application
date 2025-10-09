@@ -1,0 +1,12 @@
+{
+    "departments": [
+        {
+            "deptId": 1,
+            "departmentName": "Manufacturing",
+            "subDeptId": "1",
+            "subdepartmentName": "Maintence",
+            "departmentIncharge": "Ram",
+            "subDepartmentIncharge": "krishna"
+        }
+    ]
+}

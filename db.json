@@ -12,7 +12,17 @@
         { "id": 3, "name": "Product 3", "price": 200 },
         { "id": 4, "name": "Product 4", "price": 250 }
 
-      ]
+      ],
+      "departments": [
+        {
+            "deptId": 1,
+            "departmentName": "Manufacturing",
+            "subDeptId": "1",
+            "subdepartmentName": "Maintence",
+            "departmentIncharge": "Ram",
+            "subDepartmentIncharge": "krishna"
+        }
+    ]
 
 
     }
