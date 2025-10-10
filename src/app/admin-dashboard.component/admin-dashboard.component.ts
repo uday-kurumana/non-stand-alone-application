@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../Test-services/data-service.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AdminDashboardComponent {
 
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(): void {
+    this.dataService.getPosts().subscribe(posts => {   
+      console.log(posts);
+    }); 
+
+}
 }

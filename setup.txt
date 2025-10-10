@@ -24,3 +24,5 @@ npm install json-server --save-dev
 
 // add bootsrap features to angular project
         npm install bootstrap --save-dev
+
+        npm install jquery @popperjs/core --save-dev

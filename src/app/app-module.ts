@@ -6,22 +6,24 @@ import { App } from './app';
 import { AdminDashboardComponent } from './admin-dashboard.component/admin-dashboard.component';
 import { DeptDashboardComponent } from './dept-dashboard.component/dept-dashboard.component';
 import { EmployeeDashboardComponent } from './employee-dashboard.component/employee-dashboard.component';
-// import { MyComponent } from './my-component/my-component';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     App,
     AdminDashboardComponent,
     DeptDashboardComponent,
-    EmployeeDashboardComponent,
-    // MyComponent
+    EmployeeDashboardComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule 
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
