@@ -8,12 +8,21 @@ import { DataService } from '../Test-services/data-service.service';
   styleUrl: './admin-dashboard.component.scss'
 })
 export class AdminDashboardComponent {
+  departmentArray: IDepartment[] = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.getPosts().subscribe(posts => {   
-      console.log(posts);
+    this.dataService.departments().subscribe(department => {   
+      console.log("department item"+department[0].departmentName);
+      console.log("department item"+JSON.stringify(department))
+      console.log("before departmentarray  object before"+this.departmentArray);
+
+
+      this.departmentArray  = department;
+      
+      
+      console.log("department data fetched successfully"+this.departmentArray);
     }); 
 
 }

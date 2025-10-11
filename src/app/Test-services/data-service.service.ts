@@ -14,5 +14,15 @@
         return this.http.get<any[]>(`${this.apiUrl}/posts`);
       }
 
+      departments(): Observable<IDepartment[]> {
+        return this.http.get<IDepartment[]>(`${this.apiUrl}/departments`);
+      }
+
+      // getDepartmentById(id: number): Observable<any> {
+      //   return this.http.get<any>(`${this.apiUrl}/departments/${id}`);
+      // }
+      // createDepartment(department: any): Observable<any> {
+      //   return this.http.post<any>(`${this.apiUrl}/departments`, department);
+      // }  
       // Add other CRUD methods as needed
     }
