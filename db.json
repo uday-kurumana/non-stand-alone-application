@@ -1,29 +1,21 @@
+{
+  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" },
+  "products": [
+    { "id": 1, "name": "Product 1", "price": 100 },
+    { "id": 2, "name": "Product 2", "price": 150 },
+    { "id": 3, "name": "Product 3", "price": 200 },
+    { "id": 4, "name": "Product 4", "price": 250 }
+  ],
+  "departments": [
     {
-      "posts": [
-        { "id": 1, "title": "json-server", "author": "typicode" }
-      ],
-      "comments": [
-        { "id": 1, "body": "some comment", "postId": 1 }
-      ],
-      "profile": { "name": "typicode" },
-      "products": [
-        { "id": 1, "name": "Product 1", "price": 100 },
-        { "id": 2, "name": "Product 2", "price": 150 },
-        { "id": 3, "name": "Product 3", "price": 200 },
-        { "id": 4, "name": "Product 4", "price": 250 }
-
-      ],
-      "departments": [
-        {
-            "deptId": 1,
-            "departmentName": "Manufacturing",
-            "subDeptId": "1",
-            "subdepartmentName": "Maintence",
-            "departmentIncharge": "Ram",
-            "subDepartmentIncharge": "krishna"
-        }
-      ]
-        
-
-
+      "deptId": 1,
+      "departmentName": "Manufacturing",
+      "subDeptId": 1,
+      "subdepartmentName": "Maintence",
+      "departmentIncharge": "Ram",
+      "subDepartmentIncharge": "krishna"
     }
+  ]
+}
