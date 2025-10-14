@@ -10,12 +10,788 @@
   ],
   "departments": [
     {
-      "deptId": 1,
+      "id": 1,
       "departmentName": "Manufacturing",
       "subDeptId": 1,
       "subdepartmentName": "Maintence",
       "departmentIncharge": "Ram",
       "subDepartmentIncharge": "krishna"
+    },
+    {
+      "id": 2,
+      "departmentName": "Sales",
+      "subDeptId": 2,
+      "subdepartmentName": "Domestic Sales",
+      "departmentIncharge": "Shyam",
+      "subDepartmentIncharge": "Ravi"
+    },
+    {
+      "id": 3,
+      "departmentName": "HR",
+      "subDeptId": 3,
+      "subdepartmentName": "Recruitment",
+      "departmentIncharge": "Sita",
+      "subDepartmentIncharge": "Geeta"
+    },
+    {
+      "id": 4,
+      "departmentName": "IT",
+      "subDeptId": 4,
+      "subdepartmentName": "Support",
+      "departmentIncharge": "Lakshman",
+      "subDepartmentIncharge": "Bharat"
+    },
+    {
+      "id": 5,
+      "departmentName": "Finance",
+      "subDeptId": 5,
+      "subdepartmentName": "Accounts",
+      "departmentIncharge": "Vikram",
+      "subDepartmentIncharge": "Arjun"
+    },
+    {
+      "id": 6,
+      "departmentName": "Logistics",
+      "subDeptId": 6,
+      "subdepartmentName": "Transport",
+      "departmentIncharge": "Ajay",
+      "subDepartmentIncharge": "Vijay"
+    },
+    {
+      "id": 7,
+      "departmentName": "Customer Service",
+      "subDeptId": 7,
+      "subdepartmentName": "Support",
+      "departmentIncharge": "Naveen",
+      "subDepartmentIncharge": "Karan"
+    },
+    {
+      "id": 8,
+      "departmentName": "Research and Development",
+      "subDeptId": 8,
+      "subdepartmentName": "Innovation",
+      "departmentIncharge": "Suresh",
+      "subDepartmentIncharge": "Ramesh"
+    },
+    {
+      "id": 9,
+      "departmentName": "Quality Control",
+      "subDeptId": 9,
+      "subdepartmentName": "Inspection",
+      "departmentIncharge": "Manoj",
+      "subDepartmentIncharge": "Anil"
+    },
+    {
+      "id": 10,
+      "departmentName": "Marketing",
+      "subDeptId": 10,
+      "subdepartmentName": "Advertising",
+      "departmentIncharge": "Deepak",
+      "subDepartmentIncharge": "Sanjay"
+    },
+    {
+      "id": 11,
+      "departmentName": "Procurement",
+      "subDeptId": 11,
+      "subdepartmentName": "Purchasing",
+      "departmentIncharge": "Ashok",
+      "subDepartmentIncharge": "Rohit"
+    },
+    {
+      "id": 12,
+      "departmentName": "Legal",
+      "subDeptId": 12,
+      "subdepartmentName": "Compliance",
+      "departmentIncharge": "Vikas",
+      "subDepartmentIncharge": "Amit"
+    },
+    {
+      "id": 13,
+      "departmentName": "Administration",
+      "subDeptId": 13,
+      "subdepartmentName": "Office Management",
+      "departmentIncharge": "Pankaj",
+      "subDepartmentIncharge": "Sandeep"
+    },
+    {
+      "id": 14,
+      "departmentName": "Public Relations",
+      "subDeptId": 14,
+      "subdepartmentName": "Media Relations",
+      "departmentIncharge": "Rajat",
+      "subDepartmentIncharge": "Kunal"
+    },
+    {
+      "id": 15,
+      "departmentName": "Strategic Planning",
+      "subDeptId": 15,
+      "subdepartmentName": "Business Development",
+      "departmentIncharge": "Nitin",
+      "subDepartmentIncharge": "Harsh"
+    },
+    {
+      "id": 16,
+      "departmentName": "Training and Development",
+      "subDeptId": 16,
+      "subdepartmentName": "Employee Training",
+      "departmentIncharge": "Rakesh",
+      "subDepartmentIncharge": "Sujit"
+    },  
+    {
+      "id": 17,
+      "departmentName": "Environmental Health and Safety",
+      "subDeptId": 17,
+      "subdepartmentName": "Safety Management",
+      "departmentIncharge": "Ajit",
+      "subDepartmentIncharge": "Raju"
+    },
+    {
+      "id": 18,
+      "departmentName": "Corporate Social Responsibility",
+      "subDeptId": 18,
+      "subdepartmentName": "Community Engagement",
+      "departmentIncharge": "Vimal",
+      "subDepartmentIncharge": "Sahil"
+    },
+    {
+      "id": 19,
+      "departmentName": "Innovation and Technology",
+      "subDeptId": 19,
+      "subdepartmentName": "Tech Development",
+      "departmentIncharge": "Tarun",
+      "subDepartmentIncharge": "Nikhil"
+    },
+    {
+      "id": 20,
+      "departmentName": "Event Management",
+      "subDeptId": 20,
+      "subdepartmentName": "Corporate Events",
+      "departmentIncharge": "Gaurav",
+      "subDepartmentIncharge": "Mayank"
+    },
+    {
+      "id": 21,
+      "departmentName": "Data Analytics",
+      "subDeptId": 21,
+      "subdepartmentName": "Business Intelligence",
+      "departmentIncharge": "Suman",
+      "subDepartmentIncharge": "Ritu"
+    },
+    {
+      "id": 22,
+      "departmentName": "Content Management",
+      "subDeptId": 22,
+      "subdepartmentName": "Editorial",
+      "departmentIncharge": "Ankita",
+      "subDepartmentIncharge": "Neha"
+    },  
+    {
+      "id": 23,
+      "departmentName": "Social Media Management",
+      "subDeptId": 23,
+      "subdepartmentName": "Digital Marketing",
+      "departmentIncharge": "Pooja",
+      "subDepartmentIncharge": "Tina"
+    },
+    {
+      "id": 24,
+      "departmentName": "Vendor Management",
+      "subDeptId": 24,
+      "subdepartmentName": "Supplier Relations",
+      "departmentIncharge": "Kavita",
+      "subDepartmentIncharge": "Rina"
+    },
+    {
+      "id": 25,
+      "departmentName": "Knowledge Management",
+      "subDeptId": 25,
+      "subdepartmentName": "Information Systems",
+      "departmentIncharge": "Meena",
+      "subDepartmentIncharge": "Lata"
+    },
+    {
+      "id": 26,
+      "departmentName": "Internal Audit",
+      "subDeptId": 26,
+      "subdepartmentName": "Risk Management",
+      "departmentIncharge": "Sanjay",
+      "subDepartmentIncharge": "Vijay"
+    },  
+    {
+      "id": 27,
+      "departmentName": "Facilities Management",
+      "subDeptId": 27,
+      "subdepartmentName": "Building Maintenance",
+      "departmentIncharge": "Ramesh",
+      "subDepartmentIncharge": "Mahesh"
+    },  
+    {
+      "id": 28,
+      "departmentName": "Business Continuity Planning",
+      "subDeptId": 28,
+      "subdepartmentName": "Disaster Recovery",
+      "departmentIncharge": "Aakash",
+      "subDepartmentIncharge": "Karan"
+    },
+    {
+      "id": 29,
+      "departmentName": "Employee Relations",
+      "subDeptId": 29,
+      "subdepartmentName": "Workplace Culture",
+      "departmentIncharge": "Rohit",
+      "subDepartmentIncharge": "Amit"
+    },
+    {
+      "id": 30,
+      "departmentName": "Compensation and Benefits",
+      "subDeptId": 30,
+      "subdepartmentName": "Payroll",
+      "departmentIncharge": "Vikram",
+      "subDepartmentIncharge": "Suresh"
+    },
+    {
+      "id": 31,
+      "departmentName": "Talent Management",
+      "subDeptId": 31,
+      "subdepartmentName": "Succession Planning",
+      "departmentIncharge": "Deepak",
+      "subDepartmentIncharge": "Rajat"
+    },
+    {
+      "id": 32,
+      "departmentName": "Organizational Development",
+      "subDeptId": 32,
+      "subdepartmentName": "Change Management",
+      "departmentIncharge": "Nitin",
+      "subDepartmentIncharge": "Harsh"
+    },
+    {
+      "id": 33,
+      "departmentName": "Learning and Development",
+      "subDeptId": 33,
+      "subdepartmentName": "Skill Development",
+      "departmentIncharge": "Rakesh",
+      "subDepartmentIncharge": "Sujit"
+    },
+    {
+      "id": 34,
+      "departmentName": "Diversity and Inclusion",
+      "subDeptId": 34,
+      "subdepartmentName": "Equal Opportunity",
+      "departmentIncharge": "Ajit",
+      "subDepartmentIncharge": "Raju"
+    },
+    {
+      "id": 35,
+      "departmentName": "Employee Wellness",
+      "subDeptId": 35,
+      "subdepartmentName": "Health Programs",
+      "departmentIncharge": "Vimal",
+      "subDepartmentIncharge": "Sahil"
+    },  
+    {
+      "id": 36,
+      "departmentName": "Internal Communications",
+      "subDeptId": 36,
+      "subdepartmentName": "Employee Engagement",
+      "departmentIncharge": "Tarun",
+      "subDepartmentIncharge": "Nikhil"
+    },
+    {
+      "id": 37,
+      "departmentName": "External Communications",
+      "subDeptId": 37,
+      "subdepartmentName": "Media Relations",
+      "departmentIncharge": "Gaurav",
+      "subDepartmentIncharge": "Mayank"
+    },
+    {
+      "id": 38,
+      "departmentName": "Brand Management",
+      "subDeptId": 38,
+      "subdepartmentName": "Corporate Branding",
+      "departmentIncharge": "Suman",
+      "subDepartmentIncharge": "Ritu"
+    },
+    {
+      "id": 39,
+      "departmentName": "Crisis Management",
+      "subDeptId": 39,
+      "subdepartmentName": "Emergency Response",
+      "departmentIncharge": "Ankita",
+      "subDepartmentIncharge": "Neha"
+    },  
+    {
+      "id": 40,
+      "departmentName": "Market Research",
+      "subDeptId": 40,
+      "subdepartmentName": "Consumer Insights",
+      "departmentIncharge": "Pooja",
+      "subDepartmentIncharge": "Tina"
+    },  
+    {
+      "id": 41,
+      "departmentName": "Product Development",
+      "subDeptId": 41,
+      "subdepartmentName": "New Product Launch",
+      "departmentIncharge": "Kavita",
+      "subDepartmentIncharge": "Rina"
+    },
+    {
+      "id": 42,
+      "departmentName": "Service Delivery",
+      "subDeptId": 42,
+      "subdepartmentName": "Customer Support",
+      "departmentIncharge": "Meena",
+      "subDepartmentIncharge": "Lata"
+    },
+    {
+      "id": 43,
+      "departmentName": "Account Management",
+      "subDeptId": 43,
+      "subdepartmentName": "Client Relations",
+      "departmentIncharge": "Sanjay",
+      "subDepartmentIncharge": "Vijay"
+    },  
+    {
+      "id": 44,
+      "departmentName": "Sales Operations",
+      "subDeptId": 44,
+      "subdepartmentName": "Sales Support",
+      "departmentIncharge": "Ramesh",
+      "subDepartmentIncharge": "Mahesh"
+    },  
+    {
+      "id": 45,
+      "departmentName": "Channel Management",
+      "subDeptId": 45,
+      "subdepartmentName": "Partner Relations",
+      "departmentIncharge": "Aakash",
+      "subDepartmentIncharge": "Karan"
+    },  
+    {
+      "id": 46,
+      "departmentName": "E-commerce",
+      "subDeptId": 46,
+      "subdepartmentName": "Online Sales",
+      "departmentIncharge": "Rohit",
+      "subDepartmentIncharge": "Amit"
+    },
+    {
+      "id": 47,
+      "departmentName": "Retail Management",
+      "subDeptId": 47,
+      "subdepartmentName": "Store Operations",
+      "departmentIncharge": "Vikram",
+      "subDepartmentIncharge": "Suresh"
+    },
+    {
+      "id": 48,
+      "departmentName": "Wholesale Management",
+      "subDeptId": 48,
+      "subdepartmentName": "Distributor Relations",
+      "departmentIncharge": "Deepak",
+      "subDepartmentIncharge": "Rajat"
+    },
+    {
+      "id": 49,
+      "departmentName": "Inventory Management",
+      "subDeptId": 49,
+      "subdepartmentName": "Stock Control",
+      "departmentIncharge": "Nitin",
+      "subDepartmentIncharge": "Harsh"
+    },
+    {
+      "id": 50,
+      "departmentName": "Order Fulfillment",
+      "subDeptId": 50,
+      "subdepartmentName": "Logistics",
+      "departmentIncharge": "Rakesh",
+      "subDepartmentIncharge": "Sujit"
+    },
+    {
+      "id": 51,
+      "departmentName": "Shipping and Receiving",
+      "subDeptId": 51,
+      "subdepartmentName": "Delivery Management",
+      "departmentIncharge": "Ajit",
+      "subDepartmentIncharge": "Raju"
+    },
+    {
+      "id": 52,
+      "departmentName": "Warehouse Management",
+      "subDeptId": 52,
+      "subdepartmentName": "Storage Solutions",
+      "departmentIncharge": "Vimal",
+      "subDepartmentIncharge": "Sahil"
+    },
+    {
+      "id": 53,
+      "departmentName": "Transportation Management",
+      "subDeptId": 53,
+      "subdepartmentName": "Fleet Management",
+      "departmentIncharge": "Tarun",
+      "subDepartmentIncharge": "Nikhil"
+    },
+    {
+      "id": 54,
+      "departmentName": "Supply Chain Management",
+      "subDeptId": 54,
+      "subdepartmentName": "Logistics Planning",
+      "departmentIncharge": "Gaurav",
+      "subDepartmentIncharge": "Mayank"
+    },
+    {
+      "id": 55,
+      "departmentName": "Procurement Management",
+      "subDeptId": 55,
+      "subdepartmentName": "Supplier Management",
+      "departmentIncharge": "Suman",
+      "subDepartmentIncharge": "Ritu"
+    },
+    {
+      "id": 56,
+      "departmentName": "Contract Management",
+      "subDeptId": 56,
+      "subdepartmentName": "Vendor Contracts",
+      "departmentIncharge": "Ankita",
+      "subDepartmentIncharge": "Neha"
+    },  
+    {
+      "id": 57,
+      "departmentName": "Budgeting and Forecasting",
+      "subDeptId": 57,
+      "subdepartmentName": "Financial Planning",
+      "departmentIncharge": "Pooja",
+      "subDepartmentIncharge": "Tina"
+    },  
+    {
+      "id": 58,
+      "departmentName": "Tax Management",
+      "subDeptId": 58,
+      "subdepartmentName": "Tax Compliance",
+      "departmentIncharge": "Kavita",
+      "subDepartmentIncharge": "Rina"
+    },
+    {
+      "id": 59,
+      "departmentName": "Auditing",
+      "subDeptId": 59,
+      "subdepartmentName": "Internal Audit",
+      "departmentIncharge": "Meena",
+      "subDepartmentIncharge": "Lata"
+    },
+    {
+      "id": 60,
+      "departmentName": "Financial Reporting",
+      "subDeptId": 60,
+      "subdepartmentName": "Regulatory Reporting",
+      "departmentIncharge": "Sanjay",
+      "subDepartmentIncharge": "Vijay"
+    },  
+    {
+      "id": 61,
+      "departmentName": "Payroll Management",
+      "subDeptId": 61,
+      "subdepartmentName": "Employee Compensation",
+      "departmentIncharge": "Ramesh",
+      "subDepartmentIncharge": "Mahesh"
+    },  
+    {
+      "id": 62,
+      "departmentName": "Accounts Payable",
+      "subDeptId": 62,
+      "subdepartmentName": "Vendor Payments",
+      "departmentIncharge": "Aakash",
+      "subDepartmentIncharge": "Karan"
+    },  
+    {
+      "id": 63,
+      "departmentName": "Accounts Receivable",
+      "subDeptId": 63,
+      "subdepartmentName": "Customer Invoicing",
+      "departmentIncharge": "Rohit",
+      "subDepartmentIncharge": "Amit"
+    },
+    {
+      "id": 64,
+      "departmentName": "Treasury Management",
+      "subDeptId": 64,
+      "subdepartmentName": "Cash Management",
+      "departmentIncharge": "Vikram",
+      "subDepartmentIncharge": "Suresh"
+    },
+    {
+      "id": 65,
+      "departmentName": "Risk Management",
+      "subDeptId": 65,
+      "subdepartmentName": "Insurance",
+      "departmentIncharge": "Deepak",
+      "subDepartmentIncharge": "Rajat"
+    },  
+    {
+      "id": 66,
+      "departmentName": "Investment Management",
+      "subDeptId": 66,
+      "subdepartmentName": "Portfolio Management",
+      "departmentIncharge": "Nitin",
+      "subDepartmentIncharge": "Harsh"
+    },
+    {
+      "id": 67,
+      "departmentName": "Credit Management",
+      "subDeptId": 67,
+      "subdepartmentName": "Credit Analysis",
+      "departmentIncharge": "Rakesh",
+      "subDepartmentIncharge": "Sujit"
+    },
+    {
+      "id": 68,
+      "departmentName": "Financial Analysis",
+      "subDeptId": 68,
+      "subdepartmentName": "Performance Analysis",
+      "departmentIncharge": "Ajit",
+      "subDepartmentIncharge": "Raju"
+    },
+    {
+      "id": 69,
+      "departmentName": "Mergers and Acquisitions",
+      "subDeptId": 69,
+      "subdepartmentName": "Corporate Development",
+      "departmentIncharge": "Vimal",
+      "subDepartmentIncharge": "Sahil"
+    },
+    {
+      "id": 70,
+      "departmentName": "Investor Relations",
+      "subDeptId": 70,
+      "subdepartmentName": "Shareholder Communications",
+      "departmentIncharge": "Tarun",
+      "subDepartmentIncharge": "Nikhil"
+    },
+    {
+      "id": 71,
+      "departmentName": "Corporate Governance",
+      "subDeptId": 71,
+      "subdepartmentName": "Board Relations",
+      "departmentIncharge": "Gaurav",
+      "subDepartmentIncharge": "Mayank"
+    },
+    {
+      "id": 72,
+      "departmentName": "Sustainability Management",
+      "subDeptId": 72,
+      "subdepartmentName": "Environmental Initiatives",
+      "departmentIncharge": "Suman",
+      "subDepartmentIncharge": "Ritu"
+    },
+    {
+      "id": 73,
+      "departmentName": "Ethics and Compliance",
+      "subDeptId": 73,
+      "subdepartmentName": "Regulatory Compliance",
+      "departmentIncharge": "Ankita",
+      "subDepartmentIncharge": "Neha"
+    },  
+    {
+      "id": 74,
+      "departmentName": "Information Technology",
+      "subDeptId": 74,
+      "subdepartmentName": "IT Infrastructure",
+      "departmentIncharge": "Pooja",
+      "subDepartmentIncharge": "Tina"
+    },  
+    {
+      "id": 75,
+      "departmentName": "Software Development",
+      "subDeptId": 75,
+      "subdepartmentName": "Application Development",
+      "departmentIncharge": "Kavita",
+      "subDepartmentIncharge": "Rina"
+    },
+    {
+      "id": 76,
+      "departmentName": "Network Management",
+      "subDeptId": 76,
+      "subdepartmentName": "Network Security",
+      "departmentIncharge": "Meena",
+      "subDepartmentIncharge": "Lata"
+    },
+    {
+      "id": 77,
+      "departmentName": "Cybersecurity",
+      "subDeptId": 77,
+      "subdepartmentName": "Data Protection",
+      "departmentIncharge": "Sanjay",
+      "subDepartmentIncharge": "Vijay"
+    },  
+    {
+      "id": 78,
+      "departmentName": "Technical Support",
+      "subDeptId": 78,
+      "subdepartmentName": "Help Desk",
+      "departmentIncharge": "Ramesh",
+      "subDepartmentIncharge": "Mahesh"
+    },  
+    {
+      "id": 79,
+      "departmentName": "IT Project Management",
+      "subDeptId": 79,
+      "subdepartmentName": "Project Coordination",
+      "departmentIncharge": "Aakash",
+      "subDepartmentIncharge": "Karan"
+    },  
+    {
+      "id": 80,
+      "departmentName": "Data Management",
+      "subDeptId": 80,
+      "subdepartmentName": "Database Administration",
+      "departmentIncharge": "Rohit",
+      "subDepartmentIncharge": "Amit"
+    },
+    {
+      "id": 81,
+      "departmentName": "Cloud Computing",
+      "subDeptId": 81,
+      "subdepartmentName": "Cloud Infrastructure",
+      "departmentIncharge": "Vikram",
+      "subDepartmentIncharge": "Suresh"
+    },
+    {
+      "id": 82,
+      "departmentName": "Artificial Intelligence",
+      "subDeptId": 82,
+      "subdepartmentName": "AI Research",
+      "departmentIncharge": "Deepak",
+      "subDepartmentIncharge": "Rajat"
+    },  
+    {
+      "id": 83,
+      "departmentName": "Machine Learning",
+      "subDeptId": 83,
+      "subdepartmentName": "ML Development",
+      "departmentIncharge": "Nitin",
+      "subDepartmentIncharge": "Harsh"
+    },
+    {
+      "id": 84,
+      "departmentName": "Business Intelligence",
+      "subDeptId": 84,
+      "subdepartmentName": "Data Analytics",
+      "departmentIncharge": "Rakesh",
+      "subDepartmentIncharge": "Sujit"
+    },
+    {
+      "id": 85,
+      "departmentName": "IT Compliance",
+      "subDeptId": 85,
+      "subdepartmentName": "Regulatory Compliance",
+      "departmentIncharge": "Ajit",
+      "subDepartmentIncharge": "Raju"
+    },
+    {
+      "id": 86,
+      "departmentName": "IT Governance",
+      "subDeptId": 86,
+      "subdepartmentName": "IT Policies",
+      "departmentIncharge": "Vimal",
+      "subDepartmentIncharge": "Sahil"
+    },
+    {
+      "id": 87,
+      "departmentName": "IT Strategy",
+      "subDeptId": 87,
+      "subdepartmentName": "Technology Planning",
+      "departmentIncharge": "Tarun",
+      "subDepartmentIncharge": "Nikhil"
+    },
+    {
+      "id": 88,
+      "departmentName": "IT Training",
+      "subDeptId": 88,
+      "subdepartmentName": "Employee Training",
+      "departmentIncharge": "Gaurav",
+      "subDepartmentIncharge": "Mayank"
+    },
+    {
+      "id": 89,
+      "departmentName": "IT Asset Management",
+      "subDeptId": 89,
+      "subdepartmentName": "Hardware Management",
+      "departmentIncharge": "Suman",
+      "subDepartmentIncharge": "Ritu"
+    },
+    {
+      "id": 90,
+      "departmentName": "IT Vendor Management",
+      "subDeptId": 90,
+      "subdepartmentName": "Supplier Relations",
+      "departmentIncharge": "Ankita",
+      "subDepartmentIncharge": "Neha"
+    },  
+    {
+      "id": 91,
+      "departmentName": "IT Service Management",
+      "subDeptId": 91,
+      "subdepartmentName": "Service Delivery",
+      "departmentIncharge": "Pooja",
+      "subDepartmentIncharge": "Tina"
+    },  
+    {
+      "id": 92,
+      "departmentName": "IT Operations",
+      "subDeptId": 92,
+      "subdepartmentName": "System Administration",
+      "departmentIncharge": "Kavita",
+      "subDepartmentIncharge": "Rina"
+    },
+    {
+      "id": 93,
+      "departmentName": "IT Innovation",
+      "subDeptId": 93,
+      "subdepartmentName": "Tech Research",
+      "departmentIncharge": "Meena",
+      "subDepartmentIncharge": "Lata"
+    },
+    {
+      "id": 94,
+      "departmentName": "IT Performance Management",
+      "subDeptId": 94,
+      "subdepartmentName": "System Monitoring",
+      "departmentIncharge": "Sanjay",
+      "subDepartmentIncharge": "Vijay"
+    },  
+    {
+      "id": 95,
+      "departmentName": "IT Risk Management",
+      "subDeptId": 95,
+      "subdepartmentName": "Risk Assessment",
+      "departmentIncharge": "Ramesh",
+      "subDepartmentIncharge": "Mahesh"
+    },  
+    {
+      "id": 96,
+      "departmentName": "IT Change Management",
+      "subDeptId": 96,
+      "subdepartmentName": "Change Control",
+      "departmentIncharge": "Aakash",
+      "subDepartmentIncharge": "Karan"
+    },  
+    {
+      "id": 97,
+      "departmentName": "IT Configuration Management",
+      "subDeptId": 97,
+      "subdepartmentName": "Config Control",
+      "departmentIncharge": "Rohit",
+      "subDepartmentIncharge": "Amit"
+    },
+    {
+      "id": 98,
+      "departmentName": "IT Continuity Management",
+      "subDeptId": 98,
+      "subdepartmentName": "Disaster Recovery",
+      "departmentIncharge": "Vikram",
+      "subDepartmentIncharge" : "Suresh"
     }
   ]
 }

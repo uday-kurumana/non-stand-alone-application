@@ -19,7 +19,7 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule 
+    AppRoutingModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

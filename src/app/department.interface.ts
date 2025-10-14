@@ -1,5 +1,5 @@
 interface IDepartment {
-  deptId: number;
+  id: number;
   departmentName: string;
   subDeptId: number;
   subdepartmentName: string;

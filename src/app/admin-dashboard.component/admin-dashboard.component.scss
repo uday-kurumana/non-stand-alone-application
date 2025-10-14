@@ -1,2 +1,17 @@
 // @import '~bootstrap/scss/bootstrap.scss';
 @use "bootstrap/scss/bootstrap.scss";
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+display-text {
+  display: inline-block;
+  margin-left: 10px;
+}
