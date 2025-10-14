@@ -26,7 +26,7 @@
           
         </td>
         <td id="departmentInchargeFieldColumn">
-          @if ( !clickedDepartment ) {
+          @if ( !clickedDepartment || departmentItem.id !== selectedId ) {
           {{ departmentItem.departmentName }}
           } @else if( departmentItem.id === selectedId){
           <div class="form-group display-text">
@@ -35,7 +35,7 @@
         }
         </td>
         <td id="subDeptIdFieldColumn">
-           @if ( !clickedDepartment ) {
+           @if ( !clickedDepartment || departmentItem.id !== selectedId ) {
           {{ departmentItem.subDeptId }}
             } @else if(  departmentItem.id === selectedId){
           <div  class="form-group display-text">
@@ -44,7 +44,7 @@
           }
         </td>
         <td id="subdepartmentNameFieldColumn">
-           @if ( !clickedDepartment ) {
+           @if ( !clickedDepartment || departmentItem.id !== selectedId) {
           {{ departmentItem.subdepartmentName }}
            } @else if(  departmentItem.id === selectedId){
           <div class="form-group display-text">
@@ -53,7 +53,7 @@
         }
         </td>
         <td id="departmentInchargeFieldColumn">
-           @if ( !clickedDepartment ) {
+           @if ( !clickedDepartment || departmentItem.id !== selectedId) {
           {{ departmentItem.departmentIncharge }}
            } @else if(  departmentItem.id === selectedId) {
           <div class="form-group display-text">
@@ -62,7 +62,7 @@
         }
         </td>
         <td id="subDepartmentInchargeFieldColumn">
-           @if ( !clickedDepartment ) {
+           @if ( !clickedDepartment || departmentItem.id !== selectedId) {
           {{ departmentItem.subDepartmentIncharge }}
           } @else if(  departmentItem.id === selectedId) {
           <div class="form-group display-text">
