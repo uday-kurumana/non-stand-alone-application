@@ -70,13 +70,8 @@
                 }
               </td>
               <td>
-                <button
-                  id="editButton"
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  (click)="updateDepartment(departmentItem)"
-                >
-                  {{ clickedDepartment === true ? 'update' : 'edit' }}
+                <button id="editButton" type="button" class="btn btn-primary btn-sm" (click)="updateDepartment(departmentItem)">
+                  {{ !clickedDepartment || departmentItem.id !== selectedId? 'edit' : 'update' }}
                 </button>
               </td>
             </tr>
