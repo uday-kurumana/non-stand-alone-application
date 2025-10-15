@@ -11,7 +11,7 @@ export class AdminDashboardComponent {
   departmentArray: IDepartment[] = [];
   clickedDepartment = false;
   selectedId: number | null = null;
-
+  changeText = 'Edit';
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {

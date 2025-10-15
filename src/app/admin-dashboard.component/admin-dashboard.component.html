@@ -1,82 +1,88 @@
 <!-- <p>admin-dashboard.component works!</p> -->
-<div>
-  <button type="button" class="btn btn-primary btn-sm">Create Department</button>
-</div>
-<div class="table-responsive">
- <form > 
-     <table class="table">
-    <thead>
-      <tr>
-        <th>DeptId</th>
-        <th>DepartMentName</th>
-        <th>SubDeptId</th>
-        <th>SubDepartmentName</th>
-        <th>DepartmentIncharge</th>
-        <th>SubDepartmentIncharge</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let departmentItem of departmentArray; let i = index;trackBy: trackById">
-        <td id="deptIdFieldColumn">
-          
-          <p>{{ i }}</p>
-          
-           
-          
-        </td>
-        <td id="departmentInchargeFieldColumn">
-          @if ( !clickedDepartment || departmentItem.id !== selectedId ) {
-          {{ departmentItem.departmentName }}
-          } @else if( departmentItem.id === selectedId){
-          <div class="form-group display-text">
-            <input type="text" class="form-control" id="departmentNameField" />
-          </div>
-        }
-        </td>
-        <td id="subDeptIdFieldColumn">
-           @if ( !clickedDepartment || departmentItem.id !== selectedId ) {
-          {{ departmentItem.subDeptId }}
-            } @else if(  departmentItem.id === selectedId){
-          <div  class="form-group display-text">
-            <input type="text" class="form-control" id="subDeptIdField" />
-          </div>
-          }
-        </td>
-        <td id="subdepartmentNameFieldColumn">
-           @if ( !clickedDepartment || departmentItem.id !== selectedId) {
-          {{ departmentItem.subdepartmentName }}
-           } @else if(  departmentItem.id === selectedId){
-          <div class="form-group display-text">
-            <input type="text" class="form-control" id="subdepartmentNameField" />
-          </div>
-        }
-        </td>
-        <td id="departmentInchargeFieldColumn">
-           @if ( !clickedDepartment || departmentItem.id !== selectedId) {
-          {{ departmentItem.departmentIncharge }}
-           } @else if(  departmentItem.id === selectedId) {
-          <div class="form-group display-text">
-            <input type="text" class="form-control" id="departmentInchargeField" />
-          </div>
-        }
-        </td>
-        <td id="subDepartmentInchargeFieldColumn">
-           @if ( !clickedDepartment || departmentItem.id !== selectedId) {
-          {{ departmentItem.subDepartmentIncharge }}
-          } @else if(  departmentItem.id === selectedId) {
-          <div class="form-group display-text">
-            <input type="text" class="form-control" id="subDepartmentInchargeField" />
-          </div>
-        }
-        </td>
-        <td>
-          <button id="editButton" type="button" class="btn btn-primary btn-sm" (click)="updateDepartment(departmentItem)">
-            Edit Department
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  </form>
+<div class="d-flex justify-content-center m-3">
+  <h3>Department Details</h3>
+  <div class="">
+    <div class="d-flex justify-content-end m-3">
+      <button type="button" class="btn btn-primary btn-sm">Create Department</button>
+    </div>
+    <div class="table-responsive">
+      <form>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>DeptId</th>
+              <th>DepartMentName</th>
+              <th>SubDeptId</th>
+              <th>SubDepartmentName</th>
+              <th>DepartmentIncharge</th>
+              <th>SubDepartmentIncharge</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let departmentItem of departmentArray; let i = index; trackBy: trackById">
+              <td id="deptIdFieldColumn">
+                <p>{{ i }}</p>
+              </td>
+              <td id="departmentInchargeFieldColumn">
+                @if ( !clickedDepartment || departmentItem.id !== selectedId ) {
+                {{ departmentItem.departmentName }}
+                } @else if( departmentItem.id === selectedId){
+                <div class="form-group display-text">
+                  <input type="text" class="form-control" id="departmentNameField" />
+                </div>
+                }
+              </td>
+              <td id="subDeptIdFieldColumn">
+                @if ( !clickedDepartment || departmentItem.id !== selectedId ) {
+                {{ departmentItem.subDeptId }}
+                } @else if( departmentItem.id === selectedId){
+                <div class="form-group display-text">
+                  <input type="text" class="form-control" id="subDeptIdField" />
+                </div>
+                }
+              </td>
+              <td id="subdepartmentNameFieldColumn">
+                @if ( !clickedDepartment || departmentItem.id !== selectedId) {
+                {{ departmentItem.subdepartmentName }}
+                } @else if( departmentItem.id === selectedId){
+                <div class="form-group display-text">
+                  <input type="text" class="form-control" id="subdepartmentNameField" />
+                </div>
+                }
+              </td>
+              <td id="departmentInchargeFieldColumn">
+                @if ( !clickedDepartment || departmentItem.id !== selectedId) {
+                {{ departmentItem.departmentIncharge }}
+                } @else if( departmentItem.id === selectedId) {
+                <div class="form-group display-text">
+                  <input type="text" class="form-control" id="departmentInchargeField" />
+                </div>
+                }
+              </td>
+              <td id="subDepartmentInchargeFieldColumn">
+                @if ( !clickedDepartment || departmentItem.id !== selectedId) {
+                {{ departmentItem.subDepartmentIncharge }}
+                } @else if( departmentItem.id === selectedId) {
+                <div class="form-group display-text">
+                  <input type="text" class="form-control" id="subDepartmentInchargeField" />
+                </div>
+                }
+              </td>
+              <td>
+                <button
+                  id="editButton"
+                  type="button"
+                  class="btn btn-primary btn-sm"
+                  (click)="updateDepartment(departmentItem)"
+                >
+                  {{ clickedDepartment === true ? 'update' : 'edit' }}
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
 </div>
