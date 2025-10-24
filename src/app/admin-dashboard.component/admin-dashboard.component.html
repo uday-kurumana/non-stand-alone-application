@@ -6,7 +6,7 @@
       <button type="button" class="btn btn-primary btn-sm">Create Department</button>
     </div>
     <div class="table-responsive">
-      <form>
+      <form formGroup ="departmentForm">
         <table class="table">
           <thead>
             <tr>
@@ -19,7 +19,8 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
+            
             <tr *ngFor="let departmentItem of departmentArray; let i = index; trackBy: trackById">
               <td id="deptIdFieldColumn">
                 <p>{{ i }}</p>

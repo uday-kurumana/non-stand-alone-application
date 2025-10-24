@@ -7,6 +7,8 @@ import { AdminDashboardComponent } from './admin-dashboard.component/admin-dashb
 import { DeptDashboardComponent } from './dept-dashboard.component/dept-dashboard.component';
 import { EmployeeDashboardComponent } from './employee-dashboard.component/employee-dashboard.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,8 +21,11 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
+   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideHttpClient()
