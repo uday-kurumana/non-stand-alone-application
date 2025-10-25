@@ -6,6 +6,7 @@
       providedIn: 'root'
     })
     export class DataService {
+
       private apiUrl = 'http://localhost:3000';
 
       constructor(private http: HttpClient) { }
@@ -25,4 +26,9 @@
       //   return this.http.post<any>(`${this.apiUrl}/departments`, department);
       // }  
       // Add other CRUD methods as needed
+
+      updateDepartment(updatedDepartment: IDepartment)  : Observable<IDepartment> {
+        return this.http.put<IDepartment>(`${this.apiUrl}/departments/${updatedDepartment.deptId}`, updatedDepartment);
+        
+      }
     }

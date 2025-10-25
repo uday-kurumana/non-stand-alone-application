@@ -29,6 +29,7 @@ export class AdminDashboardComponent {
     });
     
        this.dataService.departments().subscribe((department) => {
+
       console.log('department item' + department[0].departmentName);
       console.log('department item' + JSON.stringify(department));
       console.log('before departmentarray  object before' + this.departmentArray);
@@ -47,16 +48,43 @@ export class AdminDashboardComponent {
   updateDepartment(departmentItem: IDepartment, departmentForm: FormGroup, event : any): void {
     console.log('department item to be edited' + JSON.stringify(departmentItem));
     if (this.clickedDepartment.value === false) {
-      this.selectedId = departmentItem.id;
+      this.selectedId = departmentItem.deptId;
+      this.departmentForm.patchValue({
+        deptId: departmentItem.deptId,
+        departmentName: departmentItem.departmentName,
+        subDeptId: departmentItem.subDeptId,
+        departmentIncharge: departmentItem.departmentIncharge,
+        subDepartmentName: departmentItem.subDepartmentName,
+        subDepartmentIncharge:  departmentItem.subDepartmentIncharge,
+      });
       this.clickedDepartment.setValue(true);
     } else {
+      const updatedDepartment: IDepartment = {
+        deptId: this.departmentForm.get('deptId')?.value,
+        departmentName: this.departmentForm.get('departmentName')?.value,
+        subDeptId: this.departmentForm.get('subDeptId')?.value,
+        departmentIncharge: this.departmentForm.get('departmentIncharge')?.value,
+        subDepartmentName: this.departmentForm.get('subDepartmentName')?.value,
+        subDepartmentIncharge: this.departmentForm.get('subDepartmentIncharge')?.value,
+      };
+
+      this.dataService.updateDepartment(updatedDepartment)
+        .subscribe((response) => {
+          console.log('Department updated successfully: ' + JSON.stringify(response));
+          const index = this.departmentArray.findIndex(
+            (dept) => dept.deptId === response.deptId
+          );  
+          if (index !== -1) {
+            this.departmentArray[index] = response;
+          }
+        });
       this.clickedDepartment.setValue(false);
     }
   }
 
   trackById(index: number, item: any): number {
-    // this.selectedId = item.id;
-    return item.id; // Assuming each item has a unique 'id' property
+    // this.selectedId = item.deptId;
+    return item.deptId; // Assuming each item has a unique 'deptId' property
   }
 
 //   handleForm(e: any) {
