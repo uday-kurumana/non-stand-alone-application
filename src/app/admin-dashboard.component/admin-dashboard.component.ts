@@ -14,7 +14,7 @@ export class AdminDashboardComponent {
   selectedId: number | null = null;
   changeText = 'Edit';
   departmentForm!: FormGroup;
-
+  employeeDataArray: IEmployeeDetails[] = [];
 
   constructor(private dataService: DataService) {}
 
@@ -35,6 +35,7 @@ export class AdminDashboardComponent {
       console.log('before departmentarray  object before' + this.departmentArray);
 
       this.departmentArray = department;
+      this.employeeDataArray = department.flatMap(dept => dept.employees || []);
 
       console.log('department data fetched successfully' + this.departmentArray);
     });

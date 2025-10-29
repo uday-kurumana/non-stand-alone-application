@@ -1,1 +1,28 @@
-<p>dept-dashboard.component works!</p>
+<!-- <p>dept-dashboard.component works!</p> -->
+
+<div class = 'employees-form d-flex justify-content-center m-3' [formGroup]="employeesForm">
+<div class="card w-75">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Designation</th>
+            <th>Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employeeItem of getEmployeesArrayControls(); let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ employee?.employeeId }}</td>
+            <td>{{ employee?.employeeName }}</td>
+            <td>{{ employee?.designation }}</td>
+            <td>{{ employee?.department }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
