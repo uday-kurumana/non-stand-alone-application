@@ -15,7 +15,21 @@
       "subDeptId": 1,
       "subDepartmentName": "Maintence",
       "departmentIncharge": "Ramu",
-      "subDepartmentIncharge": "krishnan"
+      "subDepartmentIncharge": "krishnan",
+      "employee": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "employeeRole": "Technician"
+        },
+        {
+          "employeeId": 102,
+          "employeeName": "Jane Smith",
+          "employeeRole": "Engineer"
+        }
+      ]
     },
     {
       "deptId": 2,

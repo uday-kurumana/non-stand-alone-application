@@ -40,3 +40,9 @@ export class DeptDashboardComponent implements OnInit {
     return (this.employeesForm.get('employeesArray') as FormArray)?.controls;
   }
 }
+
+
+// (this.employeesForm.value as FormArray
+
+
+ // this.employeesForm.controls['employeesArray'].controls     get('employeesArray')
