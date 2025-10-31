@@ -15,6 +15,7 @@ export class AdminDashboardComponent {
   changeText = 'Edit';
   departmentForm!: FormGroup;
   employeeDataArray: IEmployeeDetails[] = [];
+  showEmployeeTable: boolean = true;
 
   constructor(private dataService: DataService) {}
 
@@ -35,7 +36,7 @@ export class AdminDashboardComponent {
       console.log('before departmentarray  object before' + this.departmentArray);
 
       this.departmentArray = department;
-      this.employeeDataArray = department.flatMap(dept => dept.employees || []);
+      
 
       console.log('department data fetched successfully' + this.departmentArray);
     });
@@ -44,6 +45,12 @@ export class AdminDashboardComponent {
       console.log('clickedDepartment value changed: ' + value);
     });
   
+  }
+
+  showEmployees(departmentItem?: IDepartment): void {
+    this.employeeDataArray = departmentItem?.employees ?? [];
+    this.showEmployeeTable = !this.showEmployeeTable;
+
   }
 
   updateDepartment(departmentItem: IDepartment, departmentForm: FormGroup, event : any): void {

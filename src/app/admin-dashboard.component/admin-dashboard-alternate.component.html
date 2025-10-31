@@ -1,4 +1,8 @@
 <!-- if else usage row implementation -->
+ <div>
+ @if(showEmployeeTable) {
+
+
 <div class="d-flex justify-content-center m-3">
   <h3>Department Details</h3>
   <div class="">
@@ -6,93 +10,135 @@
       <button type="button" class="btn btn-primary btn-sm">Create Department</button>
     </div>
     <div class="table-responsive">
-      
-        <table class="table">
-          <thead>
-            <tr>
-              <th>DeptId</th>
-              <th>DepartMentName</th>
-              <th>SubDeptId</th>
-              <th>SubDepartmentName</th>
-              <th>DepartmentIncharge</th>
-              <th>SubDepartmentIncharge</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let departmentItem of departmentArray; let i = index; trackBy: trackById">
-              <ng-container [formGroup]="departmentForm">
-                
-                @if ( !clickedDepartment || departmentItem.deptId !== selectedId ) {
-                <td id="deptIdFieldColumn" >
-                  <p>{{ i + 1 }}</p>
-                </td>
-                <td id="departmentInchargeFieldColumn" >
-                  {{ departmentItem.departmentName }}
-                </td>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>DeptId</th>
+            <th>DepartMentName</th>
+            <th>SubDeptId</th>
+            <th>SubDepartmentName</th>
+            <th>DepartmentIncharge</th>
+            <th>SubDepartmentIncharge</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let departmentItem of departmentArray; let i = index; trackBy: trackById">
+            <ng-container [formGroup]="departmentForm">
+              @if ( !clickedDepartment || departmentItem.deptId !== selectedId ) {
+              <td id="deptIdFieldColumn">
+                <p>{{ i + 1 }}</p>
+              </td>
+              <td id="departmentInchargeFieldColumn">
+                {{ departmentItem.departmentName }}
+              </td>
 
-                <td id="subDeptIdFieldColumn">
+              <td id="subDeptIdFieldColumn">
                 {{ departmentItem.subDeptId }}
-                </td>
+              </td>
               <td id="subdepartmentNameFieldColumn">
-                {{ departmentItem.subDepartmentName }} 
+                {{ departmentItem.subDepartmentName }}
               </td>
               <td id="departmentInchargeFieldColumn">
                 {{ departmentItem.departmentIncharge }}
               </td>
               <td id="subDepartmentInchargeFieldColumn">
                 {{ departmentItem.subDepartmentIncharge }}
-              </td>                                        
-            }
-            @else if(departmentItem.deptId === selectedId) {
-              <td id="deptIdFieldColumn" >
-                  <input type="text" class="form-control" id="deptId" formControlName="deptId" />
-                   </td>
-              <td id="departmentInchargeFieldColumn">     
+              </td>
+              } @else if(departmentItem.deptId === selectedId) {
+              <td id="deptIdFieldColumn">
+                <input type="text" class="form-control" id="deptId" formControlName="deptId" />
+              </td>
+              <td id="departmentInchargeFieldColumn">
                 <div class="form-group display-text">
-                  <input type="text" class="form-control" id="departmentNameField"  formControlName="departmentName"/>
-                </div>      
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="departmentNameField"
+                    formControlName="departmentName"
+                  />
+                </div>
               </td>
               <td id="subDeptIdFieldColumn">
                 <div class="form-group display-text">
-                  <input type="text" class="form-control" id="subDeptIdField" formControlName="subDeptId" />  
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subDeptIdField"
+                    formControlName="subDeptId"
+                  />
                 </div>
               </td>
               <td id="subdepartmentNameFieldColumn">
                 <div class="form-group display-text">
-                  <input type="text" class="form-control" id="subdepartmentNameField" formControlName="subDepartmentName"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subdepartmentNameField"
+                    formControlName="subDepartmentName"
+                  />
                 </div>
               </td>
               <td id="departmentInchargeFieldColumn">
                 <div class="form-group display-text">
-                  <input type="text" class="form-control" id="departmentInchargeField" formControlName="departmentIncharge"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="departmentInchargeField"
+                    formControlName="departmentIncharge"
+                  />
                 </div>
               </td>
               <td id="subDepartmentInchargeFieldColumn">
                 <div class="form-group display-text">
-                  <input type="text" class="form-control" id="subDepartmentInchargeField" formControlName="subDepartmentIncharge"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subDepartmentInchargeField"
+                    formControlName="subDepartmentIncharge"
+                  />
                 </div>
               </td>
-            }
-            
-              </ng-container>
-              <td>
-                <button
-                  id="editButton"
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  (click)="updateDepartment(departmentItem, departmentForm, $event)"
-                >
-                  {{ !clickedDepartment || departmentItem.deptId !== selectedId ? 'edit' : 'update' }}
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              }
+            </ng-container>
+            <td>
+              <button
+                id="editButton"
+                type="button"
+                class="btn btn-primary btn-sm"
+                (click)="updateDepartment(departmentItem, departmentForm, $event)"
+              >
+                {{ !clickedDepartment || departmentItem.deptId !== selectedId ? 'edit' : 'update' }}
+              </button>
+              <button 
+                id="showEmployeeTableButton"
+                type="button"
+                class="btn btn-primary btn-sm"
+                (click)="showEmployees(departmentItem)"
+              >
+                showTable
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
-<!-- if else usage row implementation alternate -->
+ }
+ @else if(showEmployeeTable==false) {
+  <!-- if else usage row implementation alternate -->
 <div class="d-flex justify-content-center m-3">
+  
+  @if (employeeDataArray.length > 0 && employeeDataArray != null ) {
   <app-dept-dashboard [employeesData]="employeeDataArray"></app-dept-dashboard>
+
+  } @else {
+  <p>No employee data available.</p>
+  }
   </div>
+ 
+ }
+ </div>
+
+

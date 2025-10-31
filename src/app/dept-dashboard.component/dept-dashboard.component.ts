@@ -39,6 +39,10 @@ export class DeptDashboardComponent implements OnInit {
   getEmployeesArrayControls() {
     return (this.employeesForm.get('employeesArray') as FormArray)?.controls;
   }
+
+  returnToEmployeeTable() : void {
+    console.log('Returning to Employee Table View');
+  }
 }
 
 
