@@ -16,18 +16,45 @@
       "subDepartmentName": "Maintence",
       "departmentIncharge": "Ramu",
       "subDepartmentIncharge": "krishnan",
-      "employee": [
+      "employees": [
         {
           "employeeId": 101,
           "employeeName": "John Doe",
           "deptId": 1,
           "subDeptId": 1,
-          "employeeRole": "Technician"
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
         },
         {
-          "employeeId": 102,
-          "employeeName": "Jane Smith",
-          "employeeRole": "Engineer"
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
         }
       ]
     },
@@ -37,7 +64,48 @@
       "subDeptId": 2,
       "subDepartmentName": "Domestic Sales",
       "departmentIncharge": "Shyam",
-      "subDepartmentIncharge": "Ravi"
+      "subDepartmentIncharge": "Ravi",
+      "employees": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
+        },
+        {
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
+        }
+      ]
     },
     {
       "deptId": 3,
@@ -45,7 +113,48 @@
       "subDeptId": 3,
       "subDepartmentName": "Recruitment",
       "departmentIncharge": "Sita",
-      "subDepartmentIncharge": "Geeta"
+      "subDepartmentIncharge": "Geeta",
+      "employees": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
+        },
+        {
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
+        }
+      ]
     },
     {
       "deptId": 4,
@@ -53,7 +162,48 @@
       "subDeptId": 4,
       "subDepartmentName": "Support",
       "departmentIncharge": "Lakshman",
-      "subDepartmentIncharge": "Bharat"
+      "subDepartmentIncharge": "Bharat",
+      "employees": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
+        },
+        {
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
+        }
+      ]
     },
     {
       "deptId": 5,
@@ -61,7 +211,48 @@
       "subDeptId": 5,
       "subDepartmentName": "Accounts",
       "departmentIncharge": "Vikram",
-      "subDepartmentIncharge": "Arjun"
+      "subDepartmentIncharge": "Arjun",
+      "employees": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
+        },
+        {
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
+        }
+      ]
     },
     {
       "deptId": 6,
@@ -69,7 +260,48 @@
       "subDeptId": 6,
       "subDepartmentName": "Transport",
       "departmentIncharge": "Ajay",
-      "subDepartmentIncharge": "Vijay"
+      "subDepartmentIncharge": "Vijay",
+      "employees": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
+        },
+        {
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
+        }
+      ]
     },
     {
       "deptId": 7,
@@ -77,7 +309,48 @@
       "subDeptId": 7,
       "subDepartmentName": "Support",
       "departmentIncharge": "Naveen",
-      "subDepartmentIncharge": "Karan"
+      "subDepartmentIncharge": "Karan",
+      "employees": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
+        },
+        {
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
+        }
+      ]
     },
     {
       "deptId": 8,
@@ -85,7 +358,48 @@
       "subDeptId": 8,
       "subDepartmentName": "Innovation",
       "departmentIncharge": "Suresh",
-      "subDepartmentIncharge": "Ramesh"
+      "subDepartmentIncharge": "Ramesh",
+      "employees": [
+        {
+          "employeeId": 101,
+          "employeeName": "John Doe",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Senior Technician",
+          "managerId": 201,
+          "salary": 60000,
+          "fullTime": true
+        },
+        {
+          "employeeId": 201,
+          "employeeName": "Alice Johnson",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Maintenance Manager",
+          "managerId": null,
+          "salary": 80000,
+          "fullTime": true  
+        },
+        {
+          "employeeId": 301,
+          "employeeName": "Bob Brown",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Junior Technician",
+          "managerId": 201,
+          "salary": 40000,
+          "fullTime": false
+        },
+        {          "employeeId": 401,
+          "employeeName": "Eve Davis",
+          "deptId": 1,
+          "subDeptId": 1,
+          "designation": "Intern",
+          "managerId": 201,
+          "salary": 30000,
+          "fullTime": false
+        }
+      ]
     },
     {
       "deptId": 9,

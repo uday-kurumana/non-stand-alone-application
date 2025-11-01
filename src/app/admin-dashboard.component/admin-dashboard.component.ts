@@ -15,12 +15,12 @@ export class AdminDashboardComponent {
   changeText = 'Edit';
   departmentForm!: FormGroup;
   employeeDataArray: IEmployeeDetails[] = [];
-  showEmployeeTable: boolean = true;
+  showDeptTable: boolean = true;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.departmentForm  = new FormGroup({
+    this.departmentForm = new FormGroup({
       deptId: new FormControl({ value: '', disabled: true }, Validators.required),
       departmentName: new FormControl('', Validators.required),
       subDeptId: new FormControl('', Validators.required),
@@ -28,15 +28,13 @@ export class AdminDashboardComponent {
       subDepartmentName: new FormControl('', Validators.required),
       subDepartmentIncharge: new FormControl('', Validators.required),
     });
-    
-       this.dataService.departments().subscribe((department) => {
 
+    this.dataService.departments().subscribe((department) => {
       console.log('department item' + department[0].departmentName);
       console.log('department item' + JSON.stringify(department));
       console.log('before departmentarray  object before' + this.departmentArray);
 
       this.departmentArray = department;
-      
 
       console.log('department data fetched successfully' + this.departmentArray);
     });
@@ -44,16 +42,20 @@ export class AdminDashboardComponent {
     this.clickedDepartment.valueChanges.subscribe((value: boolean | null) => {
       console.log('clickedDepartment value changed: ' + value);
     });
-  
   }
 
   showEmployees(departmentItem?: IDepartment): void {
     this.employeeDataArray = departmentItem?.employees ?? [];
-    this.showEmployeeTable = !this.showEmployeeTable;
-
+    this.showDeptTable = !this.showDeptTable;
   }
 
-  updateDepartment(departmentItem: IDepartment, departmentForm: FormGroup, event : any): void {
+  showDepartments(event: any): void { 
+    console.log('Event received from DeptDashboardComponent: ', event);
+    
+    this.showDeptTable = true;
+  }
+
+  updateDepartment(departmentItem: IDepartment, departmentForm: FormGroup, event: any): void {
     console.log('department item to be edited' + JSON.stringify(departmentItem));
     if (this.clickedDepartment.value === false) {
       this.selectedId = departmentItem.deptId;
@@ -63,7 +65,7 @@ export class AdminDashboardComponent {
         subDeptId: departmentItem.subDeptId,
         departmentIncharge: departmentItem.departmentIncharge,
         subDepartmentName: departmentItem.subDepartmentName,
-        subDepartmentIncharge:  departmentItem.subDepartmentIncharge,
+        subDepartmentIncharge: departmentItem.subDepartmentIncharge,
       });
       this.clickedDepartment.setValue(true);
     } else {
@@ -76,16 +78,13 @@ export class AdminDashboardComponent {
         subDepartmentIncharge: this.departmentForm.get('subDepartmentIncharge')?.value,
       };
 
-      this.dataService.updateDepartment(updatedDepartment)
-        .subscribe((response) => {
-          console.log('Department updated successfully: ' + JSON.stringify(response));
-          const index = this.departmentArray.findIndex(
-            (dept) => dept.deptId === response.deptId
-          );  
-          if (index !== -1) {
-            this.departmentArray[index] = response;
-          }
-        });
+      this.dataService.updateDepartment(updatedDepartment).subscribe((response) => {
+        console.log('Department updated successfully: ' + JSON.stringify(response));
+        const index = this.departmentArray.findIndex((dept) => dept.deptId === response.deptId);
+        if (index !== -1) {
+          this.departmentArray[index] = response;
+        }
+      });
       this.clickedDepartment.setValue(false);
     }
   }
@@ -94,17 +93,18 @@ export class AdminDashboardComponent {
     // this.selectedId = item.deptId;
     return item.deptId; // Assuming each item has a unique 'deptId' property
   }
-
-//   handleForm(e: any) {
-//     console.log('form submitted'+ JSON.stringify(e));
-
-//     e.preventDefault();
-//     return false;
-// }
-
-
 }
 
+
+
+
+
+  //   handleForm(e: any) {
+  //     console.log('form submitted'+ JSON.stringify(e));
+
+  //     e.preventDefault();
+  //     return false;
+  // }
 
 
 // {
@@ -136,4 +136,3 @@ export class AdminDashboardComponent {
 //     }),
 //   ]),
 // });
-

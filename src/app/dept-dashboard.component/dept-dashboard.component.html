@@ -1,67 +1,76 @@
 <!-- <p>dept-dashboard.component works!</p> -->
 
-<div class = 'employees-form d-flex justify-content-center m-3' [formGroup]="employeesForm">
-<div class="card w-75">
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Employee ID</th>
-            <th>Employee Name</th>
-            <th>Dept ID</th>
-            <th>Sub Dept ID</th>
-            <th>Manager ID    </th>
-            <th>Designation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- employeeItem is a controltype which is a formgroup again  -->
-          <tr *ngFor="let employeeItem of getEmployeesArrayControls(); let i = index">
-            <ng-container [formGroupName]="i">
-              <td id="employeeIdColumn" >
+<div class="employees-form d-flex justify-content-center m-3" [formGroup]="employeesForm">
+  <div class="card w-75">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Employee ID</th>
+              <th>Employee Name</th>
+              <th>Dept ID</th>
+              <th>Sub Dept ID</th>
+              <th>Designation</th>
+              <th>Manager ID</th>
+              <th>Salary</th>
+              <th>Full Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- employeeItem is a controltype which is a formgroup again  -->
+            <tr formArrayName="employeesArray" *ngFor="let employeeItem of getEmployeesArrayControls(); let i = index">
+              <ng-container [formGroupName]="i">
+                <td>{{ i + 1 }}</td>
+                <td id="employeeIdColumn">
                   <input type="text" class="form-control" id="employeeId" formControlName="employeeId" />
-                   </td>
-              <td id="employeenameColumn">     
-                <div class="form-group display-text">
-                  <input type="text" class="form-control" id="employeenameField"  formControlName="employeename"/>
-                </div>     
-              </td>
-              <td id="deptIdColumn" >
-                <div class="form-group display-text">
-                  <input type="text" class="form-control" id="deptIdField"  formControlName="deptId"/>
-                </div> 
-              </td>
-              <td id="designationColumn">
-                <div class="form-group display-text">
-                  <input type="text" class="form-control" id="designationField" formControlName="designation" />    
-                </div>
-              </td>
+                </td>
+                <td id="employeenameColumn">
+                  <div class="form-group display-text">
+                    <input type="text" class="form-control" id="employeenameField" formControlName="employeename" />
+                  </div>
+                </td>
+                <td id="deptIdColumn">
+                  <div class="form-group display-text">
+                    <input type="text" class="form-control" id="deptIdField" formControlName="deptId" />
+                  </div>
+                </td>
                 <td id="subDeptIdColumn">
-                <div class="form-group display-text">
-                  <input type="text" class="form-control" id="subDeptIdField" formControlName="subDeptId" />  
-                </div>
-              </td>
-              <td id="managerIDColumn">
-                <div class="form-group display-text">
-                  <input type="text" class="form-control" id="managerIDField" formControlName="managerID" />  
-                </div>
-              </td>
-              <td id="salaryColumn">
-                <div class="form-group display-text">
-                  <input type="text" class="form-control" id="salaryField" formControlName="salary" />  
-                </div>
-              </td>
-              <td id="fullTimeColumn">
-                <div class="form-group display-text">
-                  <input type="text" class="form-control" id="fullTimeField" formControlName="fullTime" />  
-                </div>
-            </ng-container>
-            
+                  <div class="form-group display-text">
+                    <input type="text" class="form-control" id="subDeptIdField" formControlName="subDeptId" />
+                  </div>
+                </td>
+                <td id="designationColumn">
+                  <div class="form-group display-text">
+                    <input type="text" class="form-control" id="designationField" formControlName="designation" />
+                  </div>
+                </td>
 
-          </tr>
-        </tbody>
-      </table>
+                <td id="managerIDColumn">
+                  <div class="form-group display-text">
+                    <input type="text" class="form-control" id="managerIDField" formControlName="managerID" />
+                  </div>
+                </td>
+                <td id="salaryColumn">
+                  <div class="form-group display-text">
+                    <input type="text" class="form-control" id="salaryField" formControlName="salary" />
+                  </div>
+                </td>
+                <td id="fullTimeColumn">
+                  <div class="form-group display-text">
+                    <input type="text" class="form-control" id="fullTimeField" formControlName="fullTime" />
+                  </div>
+                </td>
+              </ng-container>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="d-flex justify-content-end">
+
+        <button type="button" class="btn btn-primary btn-sm" (click)="returnToAdminPage()">Return to Admin</button> 
+      </div>
     </div>
   </div>
+</div>
