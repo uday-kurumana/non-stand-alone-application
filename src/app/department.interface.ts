@@ -10,11 +10,11 @@ interface IDepartment {
 
 interface IEmployeeDetails { 
 employeeId : string | number;
-employeename : string;
+employeeName : string;
 deptId : number;
 subDeptId : number;
 designation : string;
-managerID : string | number;
+managerId : string | number;
 salary : number;
 fullTime : boolean;
 }

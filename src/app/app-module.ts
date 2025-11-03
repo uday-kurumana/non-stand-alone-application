@@ -9,6 +9,7 @@ import { EmployeeDashboardComponent } from './employee-dashboard.component/emplo
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateDepartment } from './admin-dashboard.component/create-department/create-department';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     App,
     AdminDashboardComponent,
     DeptDashboardComponent,
-    EmployeeDashboardComponent
+    EmployeeDashboardComponent,
+    CreateDepartment
     
   ],
   imports: [

@@ -16,6 +16,8 @@ export class AdminDashboardComponent {
   departmentForm!: FormGroup;
   employeeDataArray: IEmployeeDetails[] = [];
   showDeptTable: boolean = true;
+  createDepartment: boolean = false;
+  
 
   constructor(private dataService: DataService) {}
 
@@ -51,7 +53,13 @@ export class AdminDashboardComponent {
 
   showDepartments(event: any): void { 
     console.log('Event received from DeptDashboardComponent: ', event);
-    
+
+    this.showDeptTable = true;
+  }
+
+  returnToAdminPage(event: any): void {
+    console.log('Event received from CreateDepartmentComponent: ', event);
+    this.createDepartment = false;
     this.showDeptTable = true;
   }
 
@@ -78,13 +86,13 @@ export class AdminDashboardComponent {
         subDepartmentIncharge: this.departmentForm.get('subDepartmentIncharge')?.value,
       };
 
-      this.dataService.updateDepartment(updatedDepartment).subscribe((response) => {
-        console.log('Department updated successfully: ' + JSON.stringify(response));
-        const index = this.departmentArray.findIndex((dept) => dept.deptId === response.deptId);
-        if (index !== -1) {
-          this.departmentArray[index] = response;
-        }
-      });
+      // this.dataService.updateDepartment(updatedDepartment).subscribe((response) => {
+      //   console.log('Department updated successfully: ' + JSON.stringify(response));
+      //   const index = this.departmentArray.findIndex((dept) => dept.deptId === response.deptId);
+      //   if (index !== -1) {
+      //     this.departmentArray[index] = response;
+      //   }
+      // });
       this.clickedDepartment.setValue(false);
     }
   }

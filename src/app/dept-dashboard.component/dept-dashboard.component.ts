@@ -22,11 +22,11 @@ export class DeptDashboardComponent implements OnInit {
       employeesArray: this.formBuilder.array([
         this.formBuilder.group({
           employeeId: [''],
-          employeename: [''],
+          employeeName: [''],
           deptId: [''],
           subDeptId: [''],
           designation: [''],
-          managerID: [''],
+          managerId: [''],
           salary: [''],
           fullTime: [''],
         }),
@@ -41,11 +41,11 @@ export class DeptDashboardComponent implements OnInit {
       employeesFormArray.push(
         this.formBuilder.group({
           employeeId: [employee.employeeId],
-          employeename: [employee.employeename],
+          employeeName: [employee.employeeName],
           deptId: [employee.deptId],
           subDeptId: [employee.subDeptId],
           designation: [employee.designation],
-          managerID: [employee.managerID],
+          managerId: [employee.managerId],
           salary: [employee.salary],
           fullTime: [employee.fullTime],
         })

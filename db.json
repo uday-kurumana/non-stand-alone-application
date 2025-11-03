@@ -35,7 +35,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -47,7 +47,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -84,7 +85,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -96,7 +97,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -133,7 +135,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -145,7 +147,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -182,7 +185,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -194,7 +197,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -231,7 +235,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -243,7 +247,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -280,7 +285,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -292,7 +297,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -329,7 +335,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -341,7 +347,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -378,7 +385,7 @@
           "designation": "Maintenance Manager",
           "managerId": null,
           "salary": 80000,
-          "fullTime": true  
+          "fullTime": true
         },
         {
           "employeeId": 301,
@@ -390,7 +397,8 @@
           "salary": 40000,
           "fullTime": false
         },
-        {          "employeeId": 401,
+        {
+          "employeeId": 401,
           "employeeName": "Eve Davis",
           "deptId": 1,
           "subDeptId": 1,
@@ -464,7 +472,7 @@
       "subDepartmentName": "Employee Training",
       "departmentIncharge": "Rakesh",
       "subDepartmentIncharge": "Sujit"
-    },  
+    },
     {
       "deptId": 17,
       "departmentName": "Environmental Health and Safety",
@@ -504,7 +512,7 @@
       "subDepartmentName": "Business Intelligence",
       "departmentIncharge": "Suman",
       "subDepartmentIncharge": "Ritu"
-    },  
+    },
     {
       "deptId": 97,
       "departmentName": "IT Configuration Management",
@@ -519,16 +527,15 @@
       "subDeptId": 98,
       "subDepartmentName": "Disaster Recovery",
       "departmentIncharge": "Vikram",
-      "subDepartmentIncharge" : "Suresh"
+      "subDepartmentIncharge": "Suresh"
     }
   ],
-  "departments/1": 
-    {
-      "deptId": 1,
-      "departmentName": "Manufacturing",
-      "subDeptId": 1,
-      "subDepartmentName": "Maintence",
-      "departmentIncharge": "Ramu",
-      "subDepartmentIncharge": "krishnan"
-    }
+  "departments/1": {
+    "deptId": 1,
+    "departmentName": "Manufacturing",
+    "subDeptId": 1,
+    "subDepartmentName": "Maintence",
+    "departmentIncharge": "Ramu",
+    "subDepartmentIncharge": "krishnan"
+  }
 }
