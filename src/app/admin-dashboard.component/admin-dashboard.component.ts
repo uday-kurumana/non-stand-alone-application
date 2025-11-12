@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../Test-services/data-service.service';
+import { CreateDepartment } from './create-department/create-department';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -17,7 +18,8 @@ export class AdminDashboardComponent {
   employeeDataArray: IEmployeeDetails[] = [];
   showDeptTable: boolean = true;
   createDepartment: boolean = false;
-  
+
+  @ViewChild('createDeptComp', { static: false }) createDept!: CreateDepartment;
 
   constructor(private dataService: DataService) {}
 
@@ -51,7 +53,7 @@ export class AdminDashboardComponent {
     this.showDeptTable = !this.showDeptTable;
   }
 
-  showDepartments(event: any): void { 
+  showDepartments(event: any): void {
     console.log('Event received from DeptDashboardComponent: ', event);
 
     this.showDeptTable = true;
@@ -86,13 +88,7 @@ export class AdminDashboardComponent {
         subDepartmentIncharge: this.departmentForm.get('subDepartmentIncharge')?.value,
       };
 
-      // this.dataService.updateDepartment(updatedDepartment).subscribe((response) => {
-      //   console.log('Department updated successfully: ' + JSON.stringify(response));
-      //   const index = this.departmentArray.findIndex((dept) => dept.deptId === response.deptId);
-      //   if (index !== -1) {
-      //     this.departmentArray[index] = response;
-      //   }
-      // });
+     
       this.clickedDepartment.setValue(false);
     }
   }
@@ -101,19 +97,37 @@ export class AdminDashboardComponent {
     // this.selectedId = item.deptId;
     return item.deptId; // Assuming each item has a unique 'deptId' property
   }
+
+  openDepartmentPopup(): void {
+    console.log('AdminDashboardComponent: openDepartmentPopup called');
+    this.createDepartment = true;
+    // calling method of child component
+    // this.createDept.openDepartmentForm();
+    // this.showDeptTable = false;
+  }
 }
 
 
 
 
 
-  //   handleForm(e: any) {
-  //     console.log('form submitted'+ JSON.stringify(e));
 
-  //     e.preventDefault();
-  //     return false;
-  // }
 
+
+
+
+
+
+
+
+
+
+//   handleForm(e: any) {
+//     console.log('form submitted'+ JSON.stringify(e));
+
+//     e.preventDefault();
+//     return false;
+// }
 
 // {
 // formgroup {
@@ -144,3 +158,12 @@ export class AdminDashboardComponent {
 //     }),
 //   ]),
 // });
+
+
+ // this.dataService.updateDepartment(updatedDepartment).subscribe((response) => {
+      //   console.log('Department updated successfully: ' + JSON.stringify(response));
+      //   const index = this.departmentArray.findIndex((dept) => dept.deptId === response.deptId);
+      //   if (index !== -1) {
+      //     this.departmentArray[index] = response;
+      //   }
+      // });

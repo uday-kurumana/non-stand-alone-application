@@ -10,6 +10,10 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateDepartment } from './admin-dashboard.component/create-department/create-department';
+import { DeptDetailsDialog } from './admin-dashboard.component/create-department/dept-details-dialog/dept-details-dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -18,7 +22,8 @@ import { CreateDepartment } from './admin-dashboard.component/create-department/
     AdminDashboardComponent,
     DeptDashboardComponent,
     EmployeeDashboardComponent,
-    CreateDepartment
+    CreateDepartment,
+    DeptDetailsDialog
     
   ],
   imports: [
@@ -26,7 +31,10 @@ import { CreateDepartment } from './admin-dashboard.component/create-department/
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+     MatInputModule        
    ],
   providers: [
     provideBrowserGlobalErrorListeners(),

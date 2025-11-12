@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Install Angular</h2>
+<mat-dialog-content class="mat-typography">
+
+  <form class="example-form" [formGroup]="deptDetailsForm">
+    <mat-form-field class="example-full-width"  >
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi" formControlName="food">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" >
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..." formControlName="comment"></textarea>
+    </mat-form-field>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button matButton mat-dialog-close>Cancel</button>
+  <button matButton [mat-dialog-close]="" cdkFocusInitial (click)="onNoClick(deptDetailsForm.value)">Save</button>
+</mat-dialog-actions>

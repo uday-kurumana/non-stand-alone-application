@@ -8,7 +8,7 @@
       <h3>Department Details</h3>
       <div class="">
         <div class="d-flex justify-content-end m-3">
-          <button type="button" class="btn btn-primary btn-sm">Create Department</button>
+          <button type="button" class="btn btn-primary btn-sm" (click)="openDepartmentPopup()">Create Department</button>
         </div>
         <div class="table-responsive">
           <table class="table">
@@ -52,73 +52,44 @@
                   </td>
                   <td id="departmentInchargeFieldColumn">
                     <div class="form-group display-text">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="departmentNameField"
-                        formControlName="departmentName"
-                      />
+                      <input type="text" class="form-control" id="departmentNameField"
+                        formControlName="departmentName" />
                     </div>
                   </td>
                   <td id="subDeptIdFieldColumn">
                     <div class="form-group display-text">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="subDeptIdField"
-                        formControlName="subDeptId"
-                      />
+                      <input type="text" class="form-control" id="subDeptIdField" formControlName="subDeptId" />
                     </div>
                   </td>
                   <td id="subdepartmentNameFieldColumn">
                     <div class="form-group display-text">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="subdepartmentNameField"
-                        formControlName="subDepartmentName"
-                      />
+                      <input type="text" class="form-control" id="subdepartmentNameField"
+                        formControlName="subDepartmentName" />
                     </div>
                   </td>
                   <td id="departmentInchargeFieldColumn">
                     <div class="form-group display-text">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="departmentInchargeField"
-                        formControlName="departmentIncharge"
-                      />
+                      <input type="text" class="form-control" id="departmentInchargeField"
+                        formControlName="departmentIncharge" />
                     </div>
                   </td>
                   <td id="subDepartmentInchargeFieldColumn">
                     <div class="form-group display-text">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="subDepartmentInchargeField"
-                        formControlName="subDepartmentIncharge"
-                      />
+                      <input type="text" class="form-control" id="subDepartmentInchargeField"
+                        formControlName="subDepartmentIncharge" />
                     </div>
                   </td>
                   }
                 </ng-container>
                 <td>
-                  <button
-                    id="editButton"
-                    type="button"
-                    class="btn btn-primary btn-sm"
-                    (click)="updateDepartment(departmentItem, departmentForm, $event)"
-                  >
+                  <button id="editButton" type="button" class="btn btn-primary btn-sm"
+                    (click)="updateDepartment(departmentItem, departmentForm, $event)">
                     {{
-                      !clickedDepartment || departmentItem.deptId !== selectedId ? 'edit' : 'update'
+                    !clickedDepartment || departmentItem.deptId !== selectedId ? 'edit' : 'update'
                     }}
                   </button>
-                  <button
-                    id="showEmployeeTableButton"
-                    type="button"
-                    class="btn btn-primary btn-sm"
-                    (click)="showEmployees(departmentItem)"
-                  >
+                  <button id="showEmployeeTableButton" type="button" class="btn btn-primary btn-sm"
+                    (click)="showEmployees(departmentItem)">
                     showTable
                   </button>
                 </td>
@@ -132,10 +103,8 @@
     <!-- if else usage row implementation alternate -->
     <div class="d-flex justify-content-center m-3">
       @if (employeeDataArray.length > 0 && employeeDataArray != null ) {
-      <app-dept-dashboard
-        [employeesData]="employeeDataArray"
-        (returnToAdmin)="showDepartments($event)"
-      ></app-dept-dashboard>
+      <app-dept-dashboard [employeesData]="employeeDataArray"
+        (returnToAdmin)="showDepartments($event)"></app-dept-dashboard>
 
       } @else {
       <p>No employee data available.</p>
@@ -144,7 +113,7 @@
 
     }
   </div>
-} @else if( createDepartment === true)    {
-  <app-create-department (returnToAdmin)="returnToAdminPage($event)"></app-create-department>
-} 
+  } @else if( createDepartment === true) {
+  <app-create-department #createDeptComp ></app-create-department>
+  }
 </div>
