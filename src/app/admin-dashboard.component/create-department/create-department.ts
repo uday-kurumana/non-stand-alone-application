@@ -10,31 +10,41 @@ import { DeptDetailsDialog } from './dept-details-dialog/dept-details-dialog';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CreateDepartment {
+
+  returnToAdmin: EventEmitter<any> = new EventEmitter<any>();
+
+  initilizeChildFlag: boolean = false;
+
   
-  returnToAdmin:  EventEmitter<any> = new EventEmitter<any>();
-  constructor( private dialog: MatDialog) {}
+
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    console.log('CreateDepartment: ngOnInit called');    
+    console.log('CreateDepartment: ngOnInit called');
   }
 
   ngAfterViewInit(): void {
-    console.log('CreateDepartment: ngAfterViewInit called');
-    this.openDepartmentForm();
+    console.log('CreateDepartment: ngAfterViewInit called');  
+    this.initilizeChildFlag = true;
+    console.log('CreateDepartment: initilizeChildFlag set to true');
+    this.openDepartmentForm()
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DeptDetailsDialog);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+      const dialogRef = this.dialog.open(DeptDetailsDialog);
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
+
   }
 
-  openDepartmentForm(): void {  
+
+
+  openDepartmentForm(): void {
     console.log('CreateDepartment: openDepartmentForm called');
     this.openDialog();
   }
-
-
 }
+

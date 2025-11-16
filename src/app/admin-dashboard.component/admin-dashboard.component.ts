@@ -21,7 +21,7 @@ export class AdminDashboardComponent {
 
   @ViewChild('createDeptComp', { static: false }) createDept!: CreateDepartment;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     this.departmentForm = new FormGroup({
@@ -69,6 +69,7 @@ export class AdminDashboardComponent {
     console.log('department item to be edited' + JSON.stringify(departmentItem));
     if (this.clickedDepartment.value === false) {
       this.selectedId = departmentItem.deptId;
+      // assigning/binding the form values to formcontrols
       this.departmentForm.patchValue({
         deptId: departmentItem.deptId,
         departmentName: departmentItem.departmentName,
@@ -79,6 +80,7 @@ export class AdminDashboardComponent {
       });
       this.clickedDepartment.setValue(true);
     } else {
+      // on update, collect the updated values from the formcontrols
       const updatedDepartment: IDepartment = {
         deptId: this.departmentForm.get('deptId')?.value,
         departmentName: this.departmentForm.get('departmentName')?.value,
@@ -88,7 +90,7 @@ export class AdminDashboardComponent {
         subDepartmentIncharge: this.departmentForm.get('subDepartmentIncharge')?.value,
       };
 
-     
+
       this.clickedDepartment.setValue(false);
     }
   }
@@ -99,11 +101,21 @@ export class AdminDashboardComponent {
   }
 
   openDepartmentPopup(): void {
-    console.log('AdminDashboardComponent: openDepartmentPopup called');
+    // on calling child initilaize its variables
     this.createDepartment = true;
     // calling method of child component
-    // this.createDept.openDepartmentForm();
     // this.showDeptTable = false;
+    // console.log(this.createDept.initilizeChildFlag  );
+   }
+
+  verifyChildInitialization(): void {
+    console.log('AdminDashboardComponent: verifyChildInitialization called');
+    console.log('CreateDepartment initilizeChildFlag: ' + this.createDept.initilizeChildFlag);
+  }
+
+  openPopup(): void {
+    console.log('AdminDashboardComponent: openDepartmentPopup called');
+    this.createDept.openDepartmentForm();
   }
 }
 
@@ -160,10 +172,10 @@ export class AdminDashboardComponent {
 // });
 
 
- // this.dataService.updateDepartment(updatedDepartment).subscribe((response) => {
-      //   console.log('Department updated successfully: ' + JSON.stringify(response));
-      //   const index = this.departmentArray.findIndex((dept) => dept.deptId === response.deptId);
-      //   if (index !== -1) {
-      //     this.departmentArray[index] = response;
-      //   }
-      // });
+// this.dataService.updateDepartment(updatedDepartment).subscribe((response) => {
+//   console.log('Department updated successfully: ' + JSON.stringify(response));
+//   const index = this.departmentArray.findIndex((dept) => dept.deptId === response.deptId);
+//   if (index !== -1) {
+//     this.departmentArray[index] = response;
+//   }
+// });

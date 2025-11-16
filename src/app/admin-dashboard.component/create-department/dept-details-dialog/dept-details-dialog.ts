@@ -22,9 +22,16 @@ deptDetailsForm!: FormGroup<any> ;
       food: new FormControl('', Validators.required),
       comment: new FormControl('', Validators.required),
     });
+
+     this.deptDetailsForm.valueChanges.subscribe(value => {
+        console.log('Form value changed:', value);
+        // Perform actions based on the new form value
+      });
   }
 
   onNoClick(incomingValue: any): void {
     this.dialogRef.close(this.deptDetailsForm.value);
   }
+
+
 }
