@@ -15,8 +15,6 @@ export class CreateDepartment {
 
   initilizeChildFlag: boolean = false;
 
-  
-
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -39,8 +37,6 @@ export class CreateDepartment {
       });
 
   }
-
-
 
   openDepartmentForm(): void {
     console.log('CreateDepartment: openDepartmentForm called');

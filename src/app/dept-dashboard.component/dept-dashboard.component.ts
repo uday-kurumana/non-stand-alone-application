@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { removeAllAppScopedEventListeners } from '@angular/core/primitives/event-dispatch';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -14,7 +15,7 @@ export class DeptDashboardComponent implements OnInit {
   @Output() returnToAdmin = new EventEmitter<any>();
   employeesForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.employeesForm = this.formBuilder.group({
@@ -35,22 +36,25 @@ export class DeptDashboardComponent implements OnInit {
 
     // iterate  on emp data   employeesData and patch values to formarray
 
-    const employeesFormArray = this.employeesForm.get('employeesArray') as FormArray;
+    let employeesFormArray = this.employeesForm.get('employeesArray') as FormArray;
     employeesFormArray.clear(); // Clear existing controls
     this.employeesData.forEach((employee) => {
       employeesFormArray.push(
         this.formBuilder.group({
-          employeeId: [employee.employeeId],
-          employeeName: [employee.employeeName],
-          deptId: [employee.deptId],
-          subDeptId: [employee.subDeptId],
-          designation: [employee.designation],
-          managerId: [employee.managerId],
-          salary: [employee.salary],
-          fullTime: [employee.fullTime],
+          employeeId: [{ value: employee.employeeId, disabled: true }],
+          employeeName: [{ value: employee.employeeName, disabled: true }],
+          deptId: [{ value: employee.deptId, disabled: true }],
+          subDeptId: [{ value: employee.subDeptId, disabled: true }],
+          designation: [{ value: employee.designation, disabled: true }],
+          managerId: [{ value: employee.managerId, disabled: true }],
+          salary: [{ value: employee.salary, disabled: true }],
+          fullTime: [{ value: employee.fullTime, disabled: true }],
         })
       );
     });
+
+
+
 
     //  patch form values if needed
     //
@@ -72,10 +76,34 @@ export class DeptDashboardComponent implements OnInit {
     return (this.employeesForm.get('employeesArray') as FormArray)?.controls;
   }
 
- 
-returnToAdminPage(): void {
+
+  returnToAdminPage(): void {
     console.log('Returning to Admin Dashboard');
-    this.returnToAdmin.emit( {"showDeptTable": true} );
+    this.returnToAdmin.emit({ "showDeptTable": true });
+  }
+
+  addItemMethod(): void {
+    let employeesFormArray = this.employeesForm.get('employeesArray') as FormArray;
+    employeesFormArray.push(
+      this.formBuilder.group({
+        employeeId: [''],
+        employeeName: [''],
+        deptId: [''],
+        subDeptId: [''],
+        designation: [''],
+        managerId: [''],
+        salary: [''],
+        fullTime: [''],
+      })
+    );
+  }
+
+  deleteItemMethod(): void {
+    let employeesFormArray = this.employeesForm.get('employeesArray') as FormArray;
+    if (employeesFormArray.length > 0) {
+      employeesFormArray.removeAt(employeesFormArray.length - 1);
+    }
+
   }
 }
 
@@ -85,4 +113,6 @@ returnToAdminPage(): void {
 // (this.employeesForm.value as FormArray
 
 
- // this.employeesForm.controls['employeesArray'].controls     get('employeesArray')
+// this.employeesForm.controls['employeesArray'].controls     get('employeesArray')
+
+//  push , pop and removeAt methods on FormArray

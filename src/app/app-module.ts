@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateDepartment } from './admin-dashboard.component/create-department/create-department';
 import { DeptDetailsDialog } from './admin-dashboard.component/create-department/dept-details-dialog/dept-details-dialog';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 
@@ -34,7 +34,7 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     MatDialogModule,
     MatFormFieldModule,
-     MatInputModule        
+     MatInputModule  
    ],
   providers: [
     provideBrowserGlobalErrorListeners(),

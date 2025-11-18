@@ -1,4 +1,5 @@
 <h2 mat-dialog-title>Install Angular</h2>
+<mat-error *ngIf="errorFlag">{{errorText}}</mat-error>
 <mat-dialog-content class="mat-typography">
 
   <form class="example-form" [formGroup]="deptDetailsForm">
