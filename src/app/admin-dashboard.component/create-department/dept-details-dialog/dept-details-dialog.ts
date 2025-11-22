@@ -31,16 +31,20 @@ itemList: string[] = ['Pizza', 'Pasta', 'Parmesan', 'Salad', 'Soup'];
         console.log('Form value changed:', value);
         this.itemList.forEach(
           (item) => {
-            if (item.toLowerCase() === value.food.toLowerCase()) {
-              this.errorFlag = false;
-              this.errorText = '';
-            } else {
-              this.errorFlag = true;
-              this.errorText = 'We are not serving this item currently.';
-            }
+            item.toLowerCase() === value.food.toLowerCase() ? this.NoErrorScenario(): this.errorScenario();           
         })
       });
     }    
+
+  private errorScenario() {
+    this.errorFlag = true;
+    this.errorText = 'We are not serving this item currently.';
+  }
+
+  private NoErrorScenario() {
+    this.errorFlag = false;
+    this.errorText = '';
+  }
 
   onNoClick(incomingValue: any): void {
     this.dialogRef.close(this.deptDetailsForm.value);

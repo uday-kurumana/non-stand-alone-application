@@ -103,8 +103,7 @@
     <!-- if else usage row implementation alternate -->
     <div class="d-flex justify-content-center m-3">
       @if (employeeDataArray.length > 0 && employeeDataArray != null ) {
-      <app-dept-dashboard [employeesData]="employeeDataArray"
-        (returnToAdmin)="showDepartments($event)"></app-dept-dashboard>
+      <app-dept-dashboard [employeesData]="employeeDataArray" (returnToAdmin)="showDepartments($event)"></app-dept-dashboard>
 
       } @else {
       <p>No employee data available.</p>

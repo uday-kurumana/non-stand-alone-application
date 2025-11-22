@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, inject, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DeptDetailsDialog } from './dept-details-dialog/dept-details-dialog';
 
@@ -9,7 +9,7 @@ import { DeptDetailsDialog } from './dept-details-dialog/dept-details-dialog';
   styleUrl: './create-department.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CreateDepartment {
+export class CreateDepartment implements OnInit {
 
   returnToAdmin: EventEmitter<any> = new EventEmitter<any>();
 

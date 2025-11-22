@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { removeAllAppScopedEventListeners } from '@angular/core/primitives/event-dispatch';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
@@ -10,14 +10,21 @@ import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 })
 
 // dept employee details component
-export class DeptDashboardComponent implements OnInit {
+export class DeptDashboardComponent implements OnInit, OnChanges {
   @Input() employeesData: IEmployeeDetails[] = [];
   @Output() returnToAdmin = new EventEmitter<any>();
   employeesForm!: FormGroup;
+  initializeOnChenges: boolean = false;
 
   constructor(private formBuilder: FormBuilder) { }
 
+  ngOnChanges(): void {
+    if (this.initializeOnChenges) {
+      console.log('DeptDashboardComponent: ngOnChanges called with employeesData:  ', this.employeesData);
+    }
+  }
   ngOnInit(): void {
+
     this.employeesForm = this.formBuilder.group({
       //  deptLocation: [''],
       employeesArray: this.formBuilder.array([
@@ -70,6 +77,7 @@ export class DeptDashboardComponent implements OnInit {
     //   });
 
     console.log('Received employee data: ', this.employeesData);
+    this.initializeOnChenges = true;
   }
 
   getEmployeesArrayControls() {
@@ -79,7 +87,12 @@ export class DeptDashboardComponent implements OnInit {
 
   returnToAdminPage(): void {
     console.log('Returning to Admin Dashboard');
-    this.returnToAdmin.emit({ "showDeptTable": true });
+    this.returnToAdmin.emit(
+      { 
+      "showDeptTable": true , 
+     "employeeDetails":this.employeesData
+    }
+  );
   }
 
   addItemMethod(): void {

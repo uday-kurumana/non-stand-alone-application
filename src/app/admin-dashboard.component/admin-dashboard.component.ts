@@ -1,7 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../Test-services/data-service.service';
 import { CreateDepartment } from './create-department/create-department';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -9,7 +10,7 @@ import { CreateDepartment } from './create-department/create-department';
   templateUrl: './admin-dashboard-alternate.component.html',
   styleUrls: ['./admin-dashboard.component.scss'],
 })
-export class AdminDashboardComponent {
+export class AdminDashboardComponent implements  OnInit, OnChanges {
   departmentArray: IDepartment[] = [];
   clickedDepartment = new FormControl<boolean>(false);
   selectedId: number | null = null;
@@ -18,10 +19,19 @@ export class AdminDashboardComponent {
   employeeDataArray: IEmployeeDetails[] = [];
   showDeptTable: boolean = true;
   createDepartment: boolean = false;
+  @Input()
+  changedEmployeeData: Observable<IEmployeeDetails[]> = of([]);
 
   @ViewChild('createDeptComp', { static: false }) createDept!: CreateDepartment;
 
   constructor(private dataService: DataService) { }
+
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('AdminDashboardComponent: ngOnChanges called', changes);
+  }
+
+  
 
   ngOnInit(): void {
     this.departmentForm = new FormGroup({
@@ -46,7 +56,18 @@ export class AdminDashboardComponent {
     this.clickedDepartment.valueChanges.subscribe((value: boolean | null) => {
       console.log('clickedDepartment value changed: ' + value);
     });
+
+    // changedEmployeeData is an Observable; subscribe directly to receive updates,
+    // or use a Subject/BehaviorSubject if you need to push new values from this component.
+    console.log('Initial changedEmployeeData: ', this.changedEmployeeData);
+
+    this.changedEmployeeData?.subscribe(data => {
+      console.log('changedEmployeeData updated: ', data);
+    });
+
   }
+
+
 
   showEmployees(departmentItem?: IDepartment): void {
     this.employeeDataArray = departmentItem?.employees ?? [];
@@ -55,8 +76,9 @@ export class AdminDashboardComponent {
 
   showDepartments(event: any): void {
     console.log('Event received from DeptDashboardComponent: ', event);
-
     this.showDeptTable = true;
+    this.changedEmployeeData = of(event.employeeDetails);
+    console.log('Updated Employee Data: ', this.changedEmployeeData); 
   }
 
   returnToAdminPage(event: any): void {
@@ -89,8 +111,6 @@ export class AdminDashboardComponent {
         subDepartmentName: this.departmentForm.get('subDepartmentName')?.value,
         subDepartmentIncharge: this.departmentForm.get('subDepartmentIncharge')?.value,
       };
-
-
       this.clickedDepartment.setValue(false);
     }
   }
@@ -117,6 +137,8 @@ export class AdminDashboardComponent {
     console.log('AdminDashboardComponent: openDepartmentPopup called');
     this.createDept.openDepartmentForm();
   }
+
+
 }
 
 
