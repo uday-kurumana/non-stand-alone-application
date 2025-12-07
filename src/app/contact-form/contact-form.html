@@ -1,0 +1,61 @@
+<!-- <p>contact-form works!</p> -->
+<div>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="name" formControlName="name" required />
+                    <!-- <mat-error *ngIf="loginForm.get('name')?.invalid && loginForm.get('name')?.touched">
+                        Please enter a valid name.
+                    </mat-error> -->
+                    <!-- <mat-error *ngIf="loginForm.get('name')?.hasError('pattern') && loginForm.get('name')?.touched">
+                        Name doesnt match its requirement as ex. uday.kurumana.
+                    </mat-error> -->
+                    <mat-error *ngIf="loginForm.get('name')?.hasError('minlength') && loginForm.get('name')?.touched">
+                        Password length should be minimum 3 characters.
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.get('name')?.hasError('maxlength') && loginForm.get('name')?.touched">
+                        Password length should be maximum 15 characters.
+                    </mat-error>
+                     <mat-error *ngIf="loginForm.get('name')?.hasError('forbiddenNameValidator') && loginForm.get('name')?.touched">
+                        wrong type of user name.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" required />
+                    <mat-error *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                        Please enter a valid email.
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.get('email')?.hasError('pattern') && loginForm.get('email')?.touched">
+                        Password doesnt match its requirement as ex. uday0108@gmail.com.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" required />
+                    <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                        Password is required.
+                    </mat-error>
+
+                    <mat-error *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched">
+                        Password length should be minimum 6 characters.
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.get('password')?.hasError('maxlength') && loginForm.get('password')?.touched           ">
+                        Password length should be maximum 20 characters.
+                    </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+                    Login
+                </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

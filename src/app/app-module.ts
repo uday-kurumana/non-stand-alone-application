@@ -6,7 +6,7 @@ import { App } from './app';
 import { AdminDashboardComponent } from './admin-dashboard.component/admin-dashboard.component';
 import { DeptDashboardComponent } from './dept-dashboard.component/dept-dashboard.component';
 import { EmployeeDashboardComponent } from './employee-dashboard.component/employee-dashboard.component';
-import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateDepartment } from './admin-dashboard.component/create-department/create-department';
@@ -14,6 +14,9 @@ import { DeptDetailsDialog } from './admin-dashboard.component/create-department
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ContactForm } from './contact-form/contact-form';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -23,9 +26,10 @@ import { MatInputModule } from '@angular/material/input';
     DeptDashboardComponent,
     EmployeeDashboardComponent,
     CreateDepartment,
-    DeptDetailsDialog
-    
+    DeptDetailsDialog,
+   ContactForm
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,12 +38,19 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     MatDialogModule,
     MatFormFieldModule,
-     MatInputModule  
-   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideHttpClient()
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule
   ],
+  exports: [
+
+    
+  ],
+  providers: [
+    provideHttpClient(),
+    provideBrowserGlobalErrorListeners()
+  ],
+  
   bootstrap: [App]
 })
 export class AppModule { }

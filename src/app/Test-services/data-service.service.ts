@@ -12,6 +12,12 @@
       constructor(private http: HttpClient) { }
 
       getPosts(): Observable<any[]> {
+              //  sbi/insurance/ NavigatorLogin
+              // sbi/capital Markets/login
+              // sbi/loans/applyLoan
+              // sbi/cards/applyCreditCard
+                    
+        // `${this.apiUrl}  youtube    /posts`
         return this.http.get<any[]>(`${this.apiUrl}/posts`);
       }
 
