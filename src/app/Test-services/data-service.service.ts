@@ -1,6 +1,6 @@
     import { Injectable } from '@angular/core';
     import { HttpClient } from '@angular/common/http';
-    import { Observable } from 'rxjs';
+    import { filter, map, Observable, flatMap } from 'rxjs';
 
     @Injectable({
       providedIn: 'root'
@@ -25,12 +25,26 @@
         return this.http.get<IDepartment[]>(`${this.apiUrl}/departments`);
       }
 
-      // getDepartmentById(id: number): Observable<any> {
-      //   return this.http.get<any>(`${this.apiUrl}/departments/${id}`);
-      // }
-      // createDepartment(department: any): Observable<any> {
-      //   return this.http.post<any>(`${this.apiUrl}/departments`, department);
-      // }  
+      departmentsData(): Observable<IDepartment[]> {
+        return this.http.get<IDepartment[]>(`${this.apiUrl}/departments`).pipe(map(data => data)
+
+        );
+      }
+
+      
+      departmentsDatabyId(id: number): Observable<IDepartment | undefined> {
+        return this.http.get<IDepartment[]>(`${this.apiUrl}/departments/${id}`).pipe(
+          map((departments: IDepartment[]) => departments.find(dept => dept.deptId === id))
+        );
+      }
+
+      getDepartmentById(id: number): Observable<any> {
+        return this.http.get<any>(`${this.apiUrl}/departments/${id}`); 
+      }
+      createDepartment(department: any): Observable<any> {
+
+        return this.http.post<any>(`${this.apiUrl}/departments`, department);
+      }  
       // Add other CRUD methods as needed
 
       updateDepartment(updatedDepartment: IDepartment)  : Observable<IDepartment> {
